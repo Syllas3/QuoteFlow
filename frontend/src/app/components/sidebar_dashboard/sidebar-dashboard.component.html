@@ -1,0 +1,42 @@
+<aside id="sidebar" [class.expand]="isExpanded">
+  <div class="d-flex">
+    <button class="toggle-btn" type="button" (click)="toggleSidebar()">
+      <i class="lni lni-grid-alt"></i>
+    </button>
+    <div class="sidebar-logo">
+      <a href="#">App</a>
+    </div>
+  </div>
+  <ul class="sidebar-nav">
+    <li class="sidebar-item">
+      <a href="#" class="sidebar-link">
+        <i class="lni lni-user"></i>
+        <span>Perfil</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a href="#" class="sidebar-link">
+        <i class="lni lni-agenda"></i>
+        <span>Produtos</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a href="#" class="sidebar-link">
+        <i class="lni lni-popup"></i>
+        <span>Notificações</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a href="#" class="sidebar-link">
+        <i class="lni lni-cog"></i>
+        <span>Configurações</span>
+      </a>
+    </li>
+  </ul>
+  <div class="sidebar-footer">
+    <a href="#" class="sidebar-link">
+      <i class="lni lni-exit"></i>
+      <span>Logout</span>
+    </a>
+  </div>
+</aside>

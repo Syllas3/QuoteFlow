@@ -1,0 +1,17 @@
+header {
+  background-color: blue;
+}
+
+@media (max-width: 600px) {
+  #navbarNav {
+    display: none;
+  }
+  #navbarNav.show {
+    display: block;
+    width: 100%;
+    background-color: white;
+  }
+  .navbar-toggler {
+    display: inline-block;
+  }
+}

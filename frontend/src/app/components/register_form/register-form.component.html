@@ -1,0 +1,44 @@
+<div
+  class="container d-flex justify-content-center align-items-center gap-4"
+  style="min-height: calc(100vh - 100px)"
+>
+  <img
+    src="images/undraw_create.svg"
+    class="img-thumbnail"
+    style="height: 354px"
+    width="450px"
+  />
+
+  <form
+    class="p-4 bg-white rounded"
+    style="width: 350px; border: 1px solid #dee2e6"
+  >
+    <div class="mb-3">
+      <label class="form-label text-dark">Nome</label>
+      <input type="text" class="form-control" placeholder="Digite seu nome" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label text-dark">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Digite seu e-mail"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label text-dark">Senha</label>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Digite sua senha"
+      />
+    </div>
+
+    <div class="d-grid gap-2 pt-2">
+      <button [routerLink]="['/dashboard']" class="btn btn-dark" type="submit">
+        Registrar
+      </button>
+    </div>
+  </form>
+</div>

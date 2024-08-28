@@ -1,0 +1,49 @@
+<div
+  class="container d-flex justify-content-center align-items-center gap-4"
+  style="min-height: calc(100vh - 100px)"
+>
+  <img
+    src="images/undraw_login.svg"
+    class="img-thumbnail"
+    style="height: 340px"
+    width="450px"
+  />
+
+  <form
+    class="p-4 bg-white rounded"
+    style="width: 350px; border: 1px solid #dee2e6"
+  >
+    <div class="mb-3">
+      <label class="form-label text-dark">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Digite seu e-mail"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label text-dark">Senha</label>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Digite sua senha"
+      />
+    </div>
+    <div
+      class="mb-3 form-check d-flex justify-content-between align-items-center"
+    >
+      <div>
+        <input type="checkbox" class="form-check-input" />
+        <label class="form-check-label text-dark">Lembrar</label>
+      </div>
+    </div>
+    <div class="d-grid gap-2 pb-3">
+      <button [routerLink]="['/dashboard']" class="btn btn-dark" type="submit">
+        Fazer login
+      </button>
+    </div>
+    <a [routerLink]="['/forgot_password']" class="text-dark" style="font-size: 0.95rem"
+      >Esqueceu a senha?</a
+    >
+  </form>
+</div>

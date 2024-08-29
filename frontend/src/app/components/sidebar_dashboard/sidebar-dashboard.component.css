@@ -42,7 +42,7 @@ body {
   min-width: 70px;
   z-index: 1000;
   transition: all 0.25s ease-in-out;
-  background-color: #0B5389;
+  background-color: #0b5389;
   display: flex;
   flex-direction: column;
 }

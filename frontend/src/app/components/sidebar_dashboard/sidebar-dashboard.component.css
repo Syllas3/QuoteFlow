@@ -87,15 +87,21 @@ body {
 a.sidebar-link {
   padding: 0.625rem 1.625rem;
   color: #fff;
-  display: block;
+  display: flex; /* Usando Flexbox para alinhar os itens */
+  align-items: center; /* Alinhando verticalmente no centro */
   font-size: 0.9rem;
   white-space: nowrap;
   border-left: 3px solid transparent;
 }
 
 .sidebar-link i {
-  font-size: 1.1rem;
-  margin-right: 0.75rem;
+  font-size: 1.3rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0; /* Evita que o ícone encolha */
+}
+
+.sidebar-link span {
+  flex-grow: 1; /* O texto ocupará o espaço restante */
 }
 
 a.sidebar-link:hover {

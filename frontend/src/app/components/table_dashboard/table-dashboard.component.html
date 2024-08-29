@@ -1,19 +1,17 @@
-<div style="width: calc(95.5vw)" class="main p-3">
+<div class="container-fluid main p-3">
   <div class="text-right">
     <div>
-      <h2>Solicitar orçamento</h2>
-      <div style="padding: 40px">
-        <form
-          style="background-color: #c9d2da; padding: 40px; border-radius: 5px"
-        >
-          <div class="d-flex align-items-center" style="margin-bottom: 20px">
-            <h4 style="margin-right: 60px">Informações:</h4>
+      <h2><strong>Solicitar cotação:</strong></h2>
+      <div class="p-5">
+        <form class="p-5 rounded" style="background-color: #c9d2da">
+          <div class="d-flex align-items-center mb-4">
+            <h4 class="mr-5">Informações:</h4>
           </div>
 
-          <div class="d-flex align-items-center">
-            <div>
-              <label for="">Tipo</label>
-              <select name="" id="">
+          <div class="d-flex align-items-center gap-5">
+            <div class="d-flex flex-column ml-3">
+              <label for="tipo" class="pb-2">Tipo</label>
+              <select name="tipo" id="tipo" class="form-select">
                 <option value="ALIMENTOS">ALIMENTOS</option>
                 <option value="MADEIRA">MADEIRA</option>
                 <option value="LIMPEZA">LIMPEZA</option>
@@ -21,27 +19,19 @@
               </select>
             </div>
 
-            <div>
-              <label for="" style="margin-left: 20px">Nome do produto</label>
-              <input
-                type="text"
-                placeholder="COXINHA"
-                style="margin-left: 10px"
-              />
+            <div class="d-flex flex-column ml-3">
+              <label for="nome-produto" class="pb-2">Nome do produto</label>
+              <input type="text" id="nome-produto" class="form-control" />
             </div>
 
-            <div>
-              <label for="" style="margin-left: 20px">Quantidade</label>
-              <input type="text" placeholder="4" style="margin-left: 10px" />
+            <div class="d-flex flex-column ml-3">
+              <label for="quantidade" class="pb-2">Quantidade</label>
+              <input type="number" id="quantidade" class="form-control" />
             </div>
-
-            <button
-              class="btn"
-              style="background-color: #0b5389; margin-left: 20px; color: #fff"
-            >
-              SOLICITAR COTAÇÃO
-            </button>
           </div>
+          <button type="button" class="btn btn-success mt-4">
+            Solicitar cotação
+          </button>
         </form>
       </div>
     </div>

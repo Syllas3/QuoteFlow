@@ -4,6 +4,7 @@ import { LoginPageComponent } from './components/login_page/login-page.component
 import { ForgotPasswordPageComponent } from './components/forgot_password_page/forgot-password-page.component';
 import { DashboardQuotationComponent } from './components/dashboard-quotation/dashboard-quotation.component';
 import { DashboardNotificationsComponent } from './components/dashboard-notifications/dashboard-notifications.component';
+import { DashboardProfileComponent } from './components/dashboard-profile/dashboard-profile.component';
 
 export const routes: Routes = [
   { path: '', component: LoginPageComponent }, // Home
@@ -12,6 +13,7 @@ export const routes: Routes = [
   { path: 'forgot_password', component: ForgotPasswordPageComponent }, // Página de recuperar senha
   { path: 'dashboard/quotation', component: DashboardQuotationComponent }, // Página de cotação
   { path: 'dashboard/notifications', component: DashboardNotificationsComponent }, // Página de notificações
+  { path: 'dashboard/profile', component: DashboardProfileComponent }, // Página de perfil
 
   // Outras rotas
 ];

@@ -1,9 +1,15 @@
 <div class="container-fluid main p-3">
   <div>
     <div>
+      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+      </nav>
       <h1 class="px-5"><strong>Solicitar cotação:</strong></h1>
       <div class="p-5">
-        <form class="p-4 rounded" style="background-color: #c9d2da">
+        <form class="p-4 rounded" style="background-color: #e8e8e8">
           <div class="d-flex align-items-center gap-5">
             <div class="d-flex flex-column ml-3">
               <label for="tipo" class="pb-2">Tipo</label>
@@ -17,7 +23,12 @@
 
             <div class="d-flex flex-column ml-3">
               <label for="nome-produto" class="pb-2">Nome do produto</label>
-              <input type="text" id="nome-produto" class="form-control" placeholder="MDF" />
+              <input
+                type="text"
+                id="nome-produto"
+                class="form-control"
+                placeholder="MDF"
+              />
             </div>
 
             <div class="d-flex flex-column ml-3">
@@ -29,7 +40,7 @@
             type="button"
             class="btn btn-success mt-4 d-flex align-items-center justify-content-center gap-2"
           >
-            <i class="bi bi-send"></i>
+            <i class="bi bi-send-plus-fill"></i>
           </button>
         </form>
       </div>

@@ -17,7 +17,7 @@
     <li class="sidebar-item">
       <a [routerLink]="['/dashboard/quotation']" class="sidebar-link">
         <i class="lni lni-agenda"></i>
-        <span class="fs-5 text">Solicitar cotação</span>
+        <span class="fs-5 text">Cotação</span>
       </a>
     </li>
     <li class="sidebar-item">
@@ -38,5 +38,16 @@
       <i class="lni lni-exit"></i>
       <span class="fs-5 text">Logout</span>
     </a>
+  </div>
+  <div class="sidabar-footer">
+    <button type="button" class="btn btn-primary position-relative">
+      Inbox
+      <span
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+      >
+        99+
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </button>
   </div>
 </aside>

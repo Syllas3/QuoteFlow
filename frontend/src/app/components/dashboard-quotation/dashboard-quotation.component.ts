@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SidebarDashboardComponent } from "../sidebar_dashboard/sidebar-dashboard.component";
-import { FormDashboardComponent } from "../form_dashboard/form-dashboard.component";
+import { FormDashboardComponent } from "../quotation_form/form-dashboard.component";
 
 @Component({
   selector: 'app-dashboard-quotation',

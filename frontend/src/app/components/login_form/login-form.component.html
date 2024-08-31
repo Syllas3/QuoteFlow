@@ -44,10 +44,23 @@
         type="submit"
         style="background-color: #0b5389; color: #fff"
       >
-        Fazer login
+        <i class="bi bi-envelope-fill"></i>
       </button>
     </div>
-    <a [routerLink]="['/forgot_password']" class="text-dark" style="font-size: 0.95rem"
+    <div class="d-grid gap-2 pb-3">
+      <button
+        [routerLink]="['/dashboard/notifications']"
+        class="btn"
+        type="submit"
+        style="background-color: #0b5389; color: #fff"
+      >
+        <i class="bi bi-google"></i>
+      </button>
+    </div>
+    <a
+      [routerLink]="['/forgot_password']"
+      class="text-dark"
+      style="font-size: 0.95rem"
       >Esqueceu a senha?</a
     >
   </form>

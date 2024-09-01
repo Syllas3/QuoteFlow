@@ -33,7 +33,14 @@
 
             <div class="d-flex flex-column ml-3">
               <label for="quantidade" class="pb-2">Quantidade</label>
-              <input type="number" id="quantidade" class="form-control" />
+              <input
+                type="number"
+                id="quantidade"
+                class="form-control"
+                placeholder="0"
+                mask="00000"
+                [validation]="true"
+              />
             </div>
           </div>
           <button

@@ -6,5 +6,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './forgot-password-form.component.html',
+  styleUrl: './forgot-password-form.component.css'
 })
 export class ForgotPasswordFormComponent {}

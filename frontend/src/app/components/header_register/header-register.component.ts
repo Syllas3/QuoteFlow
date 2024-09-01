@@ -6,5 +6,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './header-register.component.html',
+  styleUrl: './header-register.component.css'
 })
 export class HeaderRegisterComponent {}

@@ -6,6 +6,7 @@ import { Router, RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './login-form.component.html',
+  styleUrl: './login-form.component.css'
 })
 export class LoginFormComponent {
   constructor(private router: Router) {}

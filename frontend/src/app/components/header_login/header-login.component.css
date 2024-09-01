@@ -11,3 +11,7 @@
     display: inline-block;
   }
 }
+
+.btn:hover {
+  background-color: #0b5289c5!important;
+}

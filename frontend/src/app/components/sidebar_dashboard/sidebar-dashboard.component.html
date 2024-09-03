@@ -9,19 +9,31 @@
   </div>
   <ul class="sidebar-nav">
     <li class="sidebar-item">
-      <a [routerLink]="['/dashboard/profile']" class="sidebar-link">
+      <a
+        [routerLink]="['/dashboard/profile']"
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
         <i class="bi bi-person-fill"></i>
         <span class="fs-5 text">Perfil</span>
       </a>
     </li>
     <li class="sidebar-item">
-      <a [routerLink]="['/dashboard/quotation']" class="sidebar-link">
+      <a
+        [routerLink]="['/dashboard/quotation']"
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
         <i class="bi bi-file-earmark-spreadsheet"></i>
         <span class="fs-5 text">Cotação</span>
       </a>
     </li>
     <li class="sidebar-item">
-      <a [routerLink]="['/dashboard/notifications']" class="sidebar-link">
+      <a
+        [routerLink]="['/dashboard/notifications']"
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
         <i class="bi bi-bell"></i>
         <span class="fs-5 text">Notificações</span>
       </a>

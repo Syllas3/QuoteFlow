@@ -104,11 +104,6 @@ a.sidebar-link {
   flex-grow: 1; /* O texto ocupará o espaço restante */
 }
 
-a.sidebar-link:hover {
-  background-color: rgba(255, 255, 255, 0.075);
-  border-left: 3px solid #3b7ddd;
-}
-
 .sidebar-item {
   position: relative;
 }
@@ -146,4 +141,13 @@ a.sidebar-link:hover {
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
   transform: rotate(45deg);
   transition: all 0.2s ease-out;
+}
+a.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-left: 3px solid #3b7ddd;
+}
+
+.sidebar-link.active {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-left: 3px solid #3b7ddd;
 }

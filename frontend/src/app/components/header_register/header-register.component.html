@@ -2,7 +2,7 @@
   class="navbar navbar-expand-lg bg-white py-4"
   style="border-bottom: 1px solid rgb(187, 187, 187)"
 >
-  <div class="container-fluid d-flex align-items-center">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
     <a class="navbar-brand text-dark fs-4 ms-3" href="#">QuoteFlow</a>
     <button
       class="navbar-toggler bg-white"
@@ -16,14 +16,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div
-      class="collapse navbar-collapse d-flex justify-content-end"
+      class="collapse navbar-collapse"
       id="navbarNav"
     >
-      <ul class="navbar-nav d-flex align-items-center">
-        <li class="nav-item me-3 d-flex align-items-center">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mb-2 mb-lg-0">
           <a class="nav-link text-dark fs-6" href="#">Contato</a>
         </li>
-        <li class="nav-item me-3 d-flex align-items-center">
+        <li class="nav-item">
           <button
             [routerLink]="['/login']"
             class="btn btn-sm fs-6 px-5"

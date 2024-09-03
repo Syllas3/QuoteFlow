@@ -1,17 +1,17 @@
 <div
-  class="container d-flex justify-content-center align-items-center gap-4"
+  class="container d-flex flex-column flex-md-row justify-content-center align-items-center gap-4"
   style="min-height: calc(100vh - 100px)"
 >
   <img
     src="images/undraw_create.svg"
-    class="img-thumbnail"
-    style="height: 386px"
+    class="img-thumbnail d-none d-md-block"
+    style="height: 386px; max-width: 100%;"
     width="450px"
   />
 
   <form
     class="p-4 bg-white rounded"
-    style="width: 350px; border: 1px solid #dee2e6"
+    style="width: 100%; max-width: 350px; border: 1px solid #dee2e6"
   >
     <div class="mb-3">
       <label class="form-label text-dark">Nome:</label>
@@ -38,10 +38,10 @@
 
     <span class="pb-3 d-block">Registrar-se com:</span>
 
-    <div class="d-flex gap-2">
+    <div class="d-flex flex-row gap-2">
       <button
         [routerLink]="['/dashboard']"
-        class="btn flex-fill"
+        class="btn w-50"
         type="submit"
         style="background-color: #0b5389; color: #fff"
       >
@@ -49,7 +49,7 @@
       </button>
       <button
         [routerLink]="['/dashboard']"
-        class="btn flex-fill"
+        class="btn w-50"
         type="submit"
         style="background-color: #0b5389; color: #fff"
       >

@@ -1,3 +1,7 @@
+.btn:hover {
+  background-color: #0b5289c5 !important;
+}
+
 @media (max-width: 600px) {
   #navbarNav {
     display: none;
@@ -10,8 +14,4 @@
   .navbar-toggler {
     display: inline-block;
   }
-}
-
-.btn:hover {
-  background-color: #0b5289c5!important;
 }

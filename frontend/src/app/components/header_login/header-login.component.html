@@ -2,10 +2,12 @@
   class="navbar navbar-expand-lg bg-white py-4"
   style="border-bottom: 1px solid rgb(187, 187, 187)"
 >
-<div class="container-fluid d-flex justify-content-between align-items-center">
-  <a class="navbar-brand text-dark fs-4 ms-3" href="#">QuoteFlow</a>
-  <button
-      class="navbar-toggler bg-white"
+  <div
+    class="container-fluid d-flex justify-content-between align-items-center"
+  >
+    <span class="navbar-brand text-dark fs-4 ms-3">QuoteFlow</span>
+    <button
+      class="navbar-toggler bg-white bg-light"
       type="button"
       (click)="toggleMenu()"
       data-bs-toggle="collapse"
@@ -17,21 +19,24 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div
-      class="collapse navbar-collapse justify-content-end" id="navbarNav" [ngClass]="{ show: isMenuOpen }">
-    <ul class="navbar-nav ms-auto d-flex align-items-center">
-      <li class="nav-item mb-2 mb-lg-0">
-        <a class="nav-link text-dark fs-6" href="#">Contato</a>
-      </li>
-      <li class="nav-item ms-3">
-        <button
-          [routerLink]="['/register']"
-          class="btn btn-sm fs-6 px-5"
-          style="background-color: #0b5389; color: #fff"
-        >
-          Registrar
-        </button>
-      </li>
-    </ul>
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav"
+      [ngClass]="{ show: isMenuOpen }"
+    >
+      <ul class="navbar-nav ms-auto d-flex align-items-center">
+        <li class="nav-item mb-2 mb-lg-0">
+          <a class="nav-link text-dark fs-6" href="#">Contato</a>
+        </li>
+        <li class="nav-item ms-3">
+          <button
+            [routerLink]="['/register']"
+            class="btn btn-sm fs-6 px-5"
+            style="background-color: #0b5389; color: #fff"
+          >
+            Registrar
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 </header>

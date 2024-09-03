@@ -1,25 +1,25 @@
 @media (max-width: 768px) {
-    .navbar-toggler {
-      margin-right: 10px;
-    }
-
-    .navbar-collapse {
-      width: 100%;
-      text-align: center;
-    }
-
-    .navbar-nav {
-      flex-direction: column;
-      margin-top: 10px;
-    }
-
-    .navbar-nav .nav-item {
-      margin-bottom: 10px;
-    }
-
-    .navbar-nav .nav-link,
-    .navbar-nav .btn {
-      width: 100%;
-      text-align: center;
-    }
+  .navbar-toggler {
+    margin-right: 10px;
   }
+
+  .navbar-collapse {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav .nav-link,
+  .navbar-nav .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

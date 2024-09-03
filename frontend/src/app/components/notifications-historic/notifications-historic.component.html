@@ -1,25 +1,16 @@
 <div class="container-fluid main p-3">
   <div>
     <div>
-      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+      <nav style="--bs-breadcrumb-divider: '<'" aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page">
-            Notificações
-          </li>
           <li class="breadcrumb-item">
-            <a [routerLink]="['/dashboard/notifications_historic']"
-              >Histórico</a
-            >
+            <a [routerLink]="['/dashboard/notifications']">Notificações</a>
           </li>
+          <li class="breadcrumb-item active" aria-current="page">Histórico</li>
         </ol>
       </nav>
 
-      <div class="alert alert-success" role="alert">
-        Você pode visualizar todo o seu histórico de notificações clicando na
-        aba "Histórico" logo acima. ☝️
-      </div>
-
-      <h1 class="px-5"><strong>Notificações:</strong></h1>
+      <h1 class="px-5"><strong>Histórico:</strong></h1>
       <div class="p-5">
         <form class="rounded d-flex flex-column">
           <div class="card">
@@ -30,9 +21,6 @@
                 Para realizar cotações em nosso sistema, primeiro é necessário
                 cadastrar o seu CNPJ no seu perfil.
               </p>
-              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger"
-                >Atualizar agora</a
-              >
             </div>
           </div>
         </form>

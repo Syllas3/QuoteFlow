@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './notifications-form.component.html',
-  styleUrl: './notifications-form.component.css'
 })
 export class NotificationsFormComponent {
 

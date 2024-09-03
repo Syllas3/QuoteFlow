@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/dashboard/notifications",
+    "/dashboard/profile",
+    "/dashboard/quotation",
+    "/forgot_password",
+    "/login",
+    "/register"
+  ]
+}

@@ -9,6 +9,7 @@
     <button
       class="navbar-toggler bg-white"
       type="button"
+      (click)="toggleMenu()"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNav"
       aria-controls="navbarNav"
@@ -17,7 +18,11 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav"
+      [ngClass]="{ show: isMenuOpen }"
+    >
       <ul class="navbar-nav ms-auto d-flex align-items-center">
         <li class="nav-item mb-2 mb-lg-0">
           <a class="nav-link text-dark fs-6" href="#">Contato</a>

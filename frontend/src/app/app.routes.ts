@@ -6,6 +6,7 @@ import { DashboardQuotationComponent } from './components/dashboard_quotation/da
 import { DashboardNotificationsComponent } from './components/dashboard_notifications/dashboard-notifications.component';
 import { DashboardProfileComponent } from './components/dashboard_profile/dashboard-profile.component';
 import { NotificationsHistoricComponent } from './components/notifications-historic/notifications-historic.component';
+import { DashboardConfigurationsComponent } from './components/dashboard_configurations/dashboard-configurations.component';
 
 export const routes: Routes = [
   { path: '', component: LoginPageComponent }, // Home
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: 'dashboard/notifications', component: DashboardNotificationsComponent }, // Página de notificações
   { path: 'dashboard/notifications_historic', component: NotificationsHistoricComponent }, // Página de histórico de notificações
   { path: 'dashboard/profile', component: DashboardProfileComponent }, // Página de perfil
+  { path: 'dashboard/configurations', component: DashboardConfigurationsComponent }, // Página de configurações
 
   // Outras rotas
 ];

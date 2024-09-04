@@ -2,6 +2,7 @@
   "routes": [
     "/",
     "/dashboard/notifications",
+    "/dashboard/notifications_historic",
     "/dashboard/profile",
     "/dashboard/quotation",
     "/forgot_password",

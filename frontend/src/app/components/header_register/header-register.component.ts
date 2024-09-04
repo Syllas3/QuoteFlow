@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule, CommonModule],
   templateUrl: './header-register.component.html',
-  styleUrl: './header-register.component.css'
+  styleUrl: './header-register.component.css',
 })
 export class HeaderRegisterComponent {
   isMenuOpen = false;

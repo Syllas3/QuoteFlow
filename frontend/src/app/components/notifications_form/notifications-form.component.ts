@@ -9,11 +9,18 @@ import { RouterModule } from '@angular/router';
   templateUrl: './notifications-form.component.html', // Caminho do arquivo de template HTML
 })
 export class NotificationsFormComponent {
-  showNotificationAlert: boolean = true; // Controla a exibição do alerta de notificações
+  showNotificationAlert: boolean;
+
+  constructor() {
+    // Verifica se a notificação já foi fechada anteriormente
+    const notificationClosed = localStorage.getItem('notificationClosed');
+    this.showNotificationAlert = !notificationClosed; // Mostra a notificação se ela não foi fechada
+  }
 
   // Função chamada quando o botão de fechar alerta é clicado
   closeButton() {
     this.showNotificationAlert = false; // Esconde o alerta ao definir a variável como falsa
+    localStorage.setItem('notificationClosed', 'true'); // Armazena a informação de que a notificação foi fechada
   }
 
   User: string = 'Lucas'; // Armazena o nome do usuário para exibição personalizada

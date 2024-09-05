@@ -8,5 +8,5 @@ import { RouterModule } from '@angular/router';
   templateUrl: './notifications-form.component.html',
 })
 export class NotificationsFormComponent {
-  User: String = Lucas;
+  User: String = "Lucas";
 }

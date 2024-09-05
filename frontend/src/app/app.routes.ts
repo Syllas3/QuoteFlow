@@ -5,7 +5,7 @@ import { ForgotPasswordPageComponent } from './components/forgot_password_page/f
 import { DashboardQuotationComponent } from './components/dashboard_quotation/dashboard-quotation.component';
 import { DashboardNotificationsComponent } from './components/dashboard_notifications/dashboard-notifications.component';
 import { DashboardProfileComponent } from './components/dashboard_profile/dashboard-profile.component';
-import { NotificationsHistoricComponent } from './components/notifications-historic/notifications-historic.component';
+import { NotificationsHistoricComponent } from './components/notifications_historic/notifications-historic.component';
 import { DashboardConfigurationsComponent } from './components/dashboard_configurations/dashboard-configurations.component';
 
 export const routes: Routes = [

@@ -10,7 +10,8 @@ import { RouterModule } from '@angular/router';
 export class NotificationsFormComponent {
   User: String = "Lucas";
 
-  Notifications1: Array[] = "Estamos felizes em tê-lo conosco! Se você está lendo esta mensagem,
-          desejamos que aproveite ao máximo nosso sistema de cotação."
-  Notifications2: Array[]: 
+  Notifications: Array[] = 
+  Notifications1: : "Para realizar cotações em nosso sistema, primeiro é necessário
+                cadastrar o seu CNPJ no seu perfil."
+  Notifications2: 
 }

@@ -7,4 +7,6 @@ import { RouterModule } from '@angular/router';
   imports: [RouterModule],
   templateUrl: './notifications-form.component.html',
 })
-export class NotificationsFormComponent {}
+export class NotificationsFormComponent {
+  User: String = Lucas;
+}

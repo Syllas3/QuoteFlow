@@ -13,5 +13,6 @@ export class NotificationsFormComponent {
   Notifications: Array[] = 
   Notifications1: : "Para realizar cotações em nosso sistema, primeiro é necessário
                 cadastrar o seu CNPJ no seu perfil."
-  Notifications2: 
+  Notifications2: "Para realizar cotações em nosso sistema, primeiro é necessário
+                cadastrar o seu CNPJ no seu perfil.
 }

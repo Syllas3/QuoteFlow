@@ -13,11 +13,12 @@ export class NotificationsFormComponent {
   User: string = 'Lucas'; // Nome do usuário
 
   // Definir as datas e as notificações
-  Dates: Array<string> = ['05/09/2024', '06/09/2024'];
+  Dates: Array<string> = ['05/09/2024', '06/09/2024', '00/00/0000'];
 
   Notifications: Array<string> = [
     'Para realizar cotações em nosso sistema, primeiro é necessário cadastrar o seu CNPJ no seu perfil.',
     'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est modi inventore libero nisi sunt rem nemo quaerat velit. Expedita, ab impedit dolorum rem a adipisci magni minus mollitia nam maxime!',
+    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est modi inventore libero nisi sunt rem nemo quaerat velit. Expedita, ab impedit dolorum rem a adipisci magni minus mollitia nam maxime! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est modi inventore libero nisi sunt rem nemo quaerat velit. Expedita, ab impedit dolorum rem a adipisci magni minus mollitia nam maxime!',
   ];
 
   constructor() {

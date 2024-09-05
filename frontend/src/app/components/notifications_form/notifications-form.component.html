@@ -11,68 +11,43 @@
     </ol>
   </nav>
 
-  <!-- Título principal e área das notificações -->
+  <!-- Saudação -->
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Bem-vindo(a) {{ User }}!</h4>
+    <p class="mb-0">
+      Caso tenha qualquer dúvida ou precise de assistência, não hesite em entrar
+      em contato.
+    </p>
+  </div>
+
+  <!-- Notificações -->
   <h1 class="px-5"><strong>Notificações:</strong></h1>
 
   <div class="p-5">
     <div class="d-flex flex-row flex-wrap">
       <!-- Card de notificação 1 -->
       <div class="card m-2" style="width: 18rem">
-        <div class="card-header">{{ Dates[0] }}</div>
+        <div class="card-header">
+          <i class="bi bi-calendar-event"></i> {{ Dates[0] }}
+        </div>
         <div class="card-body">
           <p class="card-text">{{ Notifications[0] }}</p>
           <a [routerLink]="['/dashboard/profile']" class="btn btn-danger"
-            >Atualizar agora</a
-          >
+            >Atualizar<i class="bi bi-box-arrow-up-right"></i
+          ></a>
         </div>
       </div>
 
       <!-- Card de notificação 2 -->
       <div class="card m-2" style="width: 18rem">
-        <div class="card-header">{{ Dates[1] }}</div>
+        <div class="card-header">
+          <i class="bi bi-calendar-event"></i> {{ Dates[1] }}
+        </div>
         <div class="card-body">
           <p class="card-text">{{ Notifications[1] }}</p>
           <a [routerLink]="['/dashboard/profile']" class="btn btn-danger"
-            >Atualizar agora</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal de saudação -->
-  <div
-    class="modal fade"
-    id="welcomeModal"
-    tabindex="-1"
-    aria-labelledby="welcomeModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="welcomeModalLabel">
-            Bem-vindo(a) {{ User }}!
-          </h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          Caso tenha qualquer dúvida ou precise de assistência, não hesite em
-          entrar em contato.
-        </div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Fechar
-          </button>
+            >Atualizar<i class="bi bi-box-arrow-up-right"></i
+          ></a>
         </div>
       </div>
     </div>

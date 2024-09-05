@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-notifications-form',
@@ -9,10 +8,11 @@ import bootstrap from 'bootstrap';
   imports: [CommonModule, RouterModule],
   templateUrl: './notifications-form.component.html',
 })
-export class NotificationsFormComponent implements AfterViewInit {
+export class NotificationsFormComponent {
   showNotificationAlert: boolean;
-  User: string = 'Lucas';
+  User: string = 'Lucas'; // Nome do usuário
 
+  // Definir as datas e as notificações
   Dates: Array<string> = ['05/09/2024', '06/09/2024'];
 
   Notifications: Array<string> = [
@@ -25,15 +25,7 @@ export class NotificationsFormComponent implements AfterViewInit {
     this.showNotificationAlert = !notificationClosed;
   }
 
-  // Função chamada após a view ser inicializada
-  ngAfterViewInit() {
-    // Exibir o modal após a view ser carregada
-    const myModal = new bootstrap.Modal(
-      document.getElementById('welcomeModal')!
-    );
-    myModal.show();
-  }
-
+  // Função de fechar o alerta
   closeButton() {
     this.showNotificationAlert = false;
     localStorage.setItem('notificationClosed', 'true');

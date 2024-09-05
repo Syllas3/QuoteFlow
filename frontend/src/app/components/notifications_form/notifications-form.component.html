@@ -1,62 +1,90 @@
 <div class="container-fluid main p-3">
+  <!-- Container principal, define a área da página e adiciona padding ao redor -->
+
   <div>
     <div>
+      <!-- Estrutura de navegação breadcrumb para ajudar o usuário a entender a localização na página -->
       <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
         <ol class="breadcrumb">
+          <!-- Lista de itens do breadcrumb. 'Notificações' está ativo, indicando a página atual -->
           <li class="breadcrumb-item active" aria-current="page">
             Notificações
           </li>
+          <!-- Link para acessar o histórico de notificações -->
           <li class="breadcrumb-item">
-            <a [routerLink]="['/dashboard/notifications_historic']"
-              >Histórico de notificações</a
-            >
+            <a [routerLink]="['/dashboard/notifications_historic']">
+              Histórico de notificações
+            </a>
           </li>
         </ol>
       </nav>
 
+      <!-- Alerta de boas-vindas ao usuário -->
       <div class="alert alert-success" role="alert">
+        <!-- Saudação personalizada com o nome do usuário -->
         <h4 class="alert-heading">Seja muito bem-vindo(a) {{ User }}!</h4>
         <p>
-          Estamos felizes em tê-lo conosco! Se você está lendo esta mensagem,
-          desejamos que aproveite ao máximo nosso sistema de cotação.
+          Mensagem de boas-vindas, encorajando o usuário a aproveitar o sistema.
         </p>
         <hr />
+        <!-- Mensagem de ajuda ou assistência, caso o usuário precise -->
         <p class="mb-0">
           Caso tenha qualquer dúvida ou precise de assistência, não hesite em
           entrar em contato conosco. Estamos aqui para ajudar!
         </p>
       </div>
 
-      <div class="alert alert-success" role="alert">
+      <!-- Alerta adicional com botão de fechar, visível com base na variável showNotificationAlert -->
+      <div
+        *ngIf="showNotificationAlert"
+        class="alert alert-success"
+        role="alert"
+      >
+        <!-- Instrução para o usuário sobre como visualizar o histórico de notificações -->
         Você pode visualizar todo o seu histórico de notificações clicando na
         aba <strong>"Histórico"</strong> logo acima. ☝️
-        <button type="button" class="btn-close" aria-label="Close"></button>
+        <!-- Botão para fechar o alerta, ao clicar executa a função closeButton() -->
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="closeButton()"
+        ></button>
       </div>
 
+      <!-- Título principal da seção de notificações -->
       <h1 class="px-5"><strong>Notificações:</strong></h1>
+
+      <!-- Área contendo o formulário com as notificações -->
       <div class="p-5">
         <form class="rounded d-flex flex-column">
+          <!-- Primeira notificação, estruturada dentro de um card -->
           <div class="card">
             <div class="card-header">Notificação 1</div>
             <div class="card-body">
+              <!-- Exibe a primeira notificação da lista Notifications -->
               <p class="card-text">
                 {{ Notifications[0] }}
               </p>
-              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger"
-                >Atualizar agora</a
-              >
+              <!-- Link para o perfil, sugerindo ao usuário que atualize as informações -->
+              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger">
+                Atualizar agora
+              </a>
             </div>
           </div>
 
+          <!-- Segunda notificação, estruturada de forma semelhante -->
           <div class="card">
             <div class="card-header">Notificação 2</div>
             <div class="card-body">
+              <!-- Exibe a segunda notificação da lista Notifications -->
               <p class="card-text">
                 {{ Notifications[1] }}
               </p>
-              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger"
-                >Atualizar agora</a
-              >
+              <!-- Link para o perfil, sugerindo ao usuário que atualize as informações -->
+              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger">
+                Atualizar agora
+              </a>
             </div>
           </div>
         </form>

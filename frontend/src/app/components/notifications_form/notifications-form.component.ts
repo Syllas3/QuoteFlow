@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-notifications-form',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ModalComponent],
   templateUrl: './notifications-form.component.html',
 })
 export class NotificationsFormComponent {

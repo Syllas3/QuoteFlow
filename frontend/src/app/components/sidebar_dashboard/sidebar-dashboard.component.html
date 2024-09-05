@@ -10,6 +10,16 @@
   <ul class="sidebar-nav">
     <li class="sidebar-item">
       <a
+        [routerLink]="['/dashboard/notifications']"
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
+        <i class="bi bi-bell"></i>
+        <span class="fs-5 text">Notificações</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a
         [routerLink]="['/dashboard/profile']"
         routerLinkActive="active"
         class="sidebar-link"
@@ -28,16 +38,7 @@
         <span class="fs-5 text">Cotação</span>
       </a>
     </li>
-    <li class="sidebar-item">
-      <a
-        [routerLink]="['/dashboard/notifications']"
-        routerLinkActive="active"
-        class="sidebar-link"
-      >
-        <i class="bi bi-bell"></i>
-        <span class="fs-5 text">Notificações</span>
-      </a>
-    </li>
+
     <li class="sidebar-item">
       <a
         [routerLink]="['/dashboard/configurations']"

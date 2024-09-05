@@ -7,7 +7,9 @@
             Notificações
           </li>
           <li class="breadcrumb-item">
-            <a [routerLink]="['/dashboard/notifications_historic']">Histórico de notificações</a>
+            <a [routerLink]="['/dashboard/notifications_historic']"
+              >Histórico de notificações</a
+            >
           </li>
         </ol>
       </nav>
@@ -34,23 +36,27 @@
       <h1 class="px-5"><strong>Notificações:</strong></h1>
       <div class="p-5">
         <form class="rounded d-flex flex-column">
-          <div class="card" *ngIf="showNotificationIndex === 0">
+          <div class="card">
             <div class="card-header">Notificação 1</div>
             <div class="card-body">
               <p class="card-text">
                 {{ Notifications[0] }}
               </p>
-              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger">Atualizar agora</a>
+              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger"
+                >Atualizar agora</a
+              >
             </div>
           </div>
 
-          <div class="card" *ngIf="showNotificationIndex === 1">
+          <div class="card">
             <div class="card-header">Notificação 2</div>
             <div class="card-body">
               <p class="card-text">
                 {{ Notifications[1] }}
               </p>
-              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger">Atualizar agora</a>
+              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger"
+                >Atualizar agora</a
+              >
             </div>
           </div>
         </form>

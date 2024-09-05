@@ -7,58 +7,46 @@
           <li class="breadcrumb-item active" aria-current="page">Library</li>
         </ol>
       </nav>
-      <h1 class="px-5"><strong>Seu perfil:</strong></h1>
-      <div class="p-5">
-        <form class="p-4 rounded" style="background-color: #e8e8e8">
-          <i class="bi bi-person-circle"></i>
-          <i class="bi bi-pencil-square"></i>
-          <span
-            >Usuário poderá inserir/fazer upload da imagem e também
-            alterar</span
-          >
-          <button type="submit" class="btn btn-primary">Upload</button>
 
+      <h1 class="px-5"><strong>Seu perfil:</strong></h1>
+
+      <div class="p-5">
+        <div class="p-4 rounded" style="background-color: #e8e8e8">
           <form>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Nome</label>
+              <label class="form-label">Nome:</label>
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="User"
+                placeholder="Lucas"
+                disabled
               />
-              <div id="emailHelp" class="form-text">
-                We'll never share your email with anyone else.
-              </div>
             </div>
 
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">CNPJ</label>
+              <label class="form-label">CNPJ:</label>
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                placeholder="00.000.000/0000-00"
+                mask="00.000.000/0000-00"
+                formControlName="cnpj"
               />
-              <div id="emailHelp" class="form-text">
-                We'll never share your email with anyone else.
-              </div>
             </div>
 
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Telefone</label
-              >
+              <label class="form-label">Empresa:</label>
+              <input type="text" class="form-control" placeholder="QuoteFlow" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Telefone:</label>
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                placeholder="+00 (00) 00000000"
+                mask="(00) 00000000||+00 (00) 00000000"
               />
-              <div id="emailHelp" class="form-text">
-                We'll never share your email with anyone else.
-              </div>
             </div>
 
             <div class="mb-3 form-check">
@@ -74,7 +62,7 @@
 
             <button class="btn btn-primary">Submeter</button>
           </form>
-        </form>
+        </div>
       </div>
     </div>
   </div>

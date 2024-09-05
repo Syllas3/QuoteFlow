@@ -20,13 +20,13 @@
       </nav>
 
       <!-- Alerta de boas-vindas ao usuário -->
-      <div class="alert alert-success" role="alert">
+      <div
+        class="alert alert-success d-flex flex-column justify-content-center"
+        role="alert"
+      >
         <!-- Saudação personalizada com o nome do usuário -->
-        <h4 class="alert-heading">Seja muito bem-vindo(a) {{ User }}!</h4>
-        <p>
-          Mensagem de boas-vindas, encorajando o usuário a aproveitar o sistema.
-        </p>
-        <hr />
+        <h4 class="alert-heading">Bem-vindo(a) {{ User }}!</h4>
+
         <!-- Mensagem de ajuda ou assistência, caso o usuário precise -->
         <p class="mb-0">
           Caso tenha qualquer dúvida ou precise de assistência, não hesite em
@@ -37,12 +37,12 @@
       <!-- Alerta adicional com botão de fechar, visível com base na variável showNotificationAlert -->
       <div
         *ngIf="showNotificationAlert"
-        class="alert alert-success"
+        class="alert alert-success d-flex align-items-center justify-content-between"
         role="alert"
       >
         <!-- Instrução para o usuário sobre como visualizar o histórico de notificações -->
         Você pode visualizar todo o seu histórico de notificações clicando na
-        aba <strong>"Histórico"</strong> logo acima. ☝️
+        aba "Histórico de notificações" logo acima. ☝️
         <!-- Botão para fechar o alerta, ao clicar executa a função closeButton() -->
         <button
           type="button"
@@ -57,9 +57,10 @@
 
       <!-- Área contendo o formulário com as notificações -->
       <div class="p-5">
-        <form class="rounded d-flex flex-column">
+        <!-- Ajustamos aqui -->
+        <div class="d-flex flex-row flex-wrap">
           <!-- Primeira notificação, estruturada dentro de um card -->
-          <div class="card">
+          <div class="card m-2" style="width: 18rem">
             <div class="card-header">Notificação 1</div>
             <div class="card-body">
               <!-- Exibe a primeira notificação da lista Notifications -->
@@ -74,7 +75,7 @@
           </div>
 
           <!-- Segunda notificação, estruturada de forma semelhante -->
-          <div class="card">
+          <div class="card m-2" style="width: 18rem">
             <div class="card-header">Notificação 2</div>
             <div class="card-body">
               <!-- Exibe a segunda notificação da lista Notifications -->
@@ -87,7 +88,7 @@
               </a>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>

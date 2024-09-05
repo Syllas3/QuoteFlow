@@ -1,33 +1,41 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import bootstrap from 'bootstrap';
 
 @Component({
-  selector: 'app-notifications-form', // Define o seletor do componente
-  standalone: true, // Define que este é um componente autônomo (standalone)
-  imports: [CommonModule, RouterModule], // Importa os módulos necessários (CommonModule e RouterModule)
-  templateUrl: './notifications-form.component.html', // Caminho do arquivo de template HTML
+  selector: 'app-notifications-form',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
+  templateUrl: './notifications-form.component.html',
 })
-export class NotificationsFormComponent {
+export class NotificationsFormComponent implements AfterViewInit {
   showNotificationAlert: boolean;
+  User: string = 'Lucas';
 
-  constructor() {
-    // Verifica se a notificação já foi fechada anteriormente
-    const notificationClosed = localStorage.getItem('notificationClosed');
-    this.showNotificationAlert = !notificationClosed; // Mostra a notificação se ela não foi fechada
-  }
+  Dates: Array<string> = ['05/09/2024', '06/09/2024'];
 
-  // Função chamada quando o botão de fechar alerta é clicado
-  closeButton() {
-    this.showNotificationAlert = false; // Esconde o alerta ao definir a variável como falsa
-    localStorage.setItem('notificationClosed', 'true'); // Armazena a informação de que a notificação foi fechada
-  }
-
-  User: string = 'Lucas'; // Armazena o nome do usuário para exibição personalizada
-
-  // Array de notificações que são exibidas na interface
   Notifications: Array<string> = [
     'Para realizar cotações em nosso sistema, primeiro é necessário cadastrar o seu CNPJ no seu perfil.',
     'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est modi inventore libero nisi sunt rem nemo quaerat velit. Expedita, ab impedit dolorum rem a adipisci magni minus mollitia nam maxime!',
   ];
+
+  constructor() {
+    const notificationClosed = localStorage.getItem('notificationClosed');
+    this.showNotificationAlert = !notificationClosed;
+  }
+
+  // Função chamada após a view ser inicializada
+  ngAfterViewInit() {
+    // Exibir o modal após a view ser carregada
+    const myModal = new bootstrap.Modal(
+      document.getElementById('welcomeModal')!
+    );
+    myModal.show();
+  }
+
+  closeButton() {
+    this.showNotificationAlert = false;
+    localStorage.setItem('notificationClosed', 'true');
+  }
 }

@@ -1,93 +1,78 @@
 <div class="container-fluid main p-3">
-  <!-- Container principal, define a área da página e adiciona padding ao redor -->
+  <!-- Navegação breadcrumb -->
+  <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Notificações</li>
+      <li class="breadcrumb-item">
+        <a [routerLink]="['/dashboard/notifications_historic']">
+          Histórico de notificações
+        </a>
+      </li>
+    </ol>
+  </nav>
 
-  <div>
-    <div>
-      <!-- Estrutura de navegação breadcrumb para ajudar o usuário a entender a localização na página -->
-      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <!-- Lista de itens do breadcrumb. 'Notificações' está ativo, indicando a página atual -->
-          <li class="breadcrumb-item active" aria-current="page">
-            Notificações
-          </li>
-          <!-- Link para acessar o histórico de notificações -->
-          <li class="breadcrumb-item">
-            <a [routerLink]="['/dashboard/notifications_historic']">
-              Histórico de notificações
-            </a>
-          </li>
-        </ol>
-      </nav>
+  <!-- Título principal e área das notificações -->
+  <h1 class="px-5"><strong>Notificações:</strong></h1>
 
-      <!-- Alerta de boas-vindas ao usuário -->
-      <div
-        class="alert alert-success d-flex flex-column justify-content-center"
-        role="alert"
-      >
-        <!-- Saudação personalizada com o nome do usuário -->
-        <h4 class="alert-heading">Bem-vindo(a) {{ User }}!</h4>
+  <div class="p-5">
+    <div class="d-flex flex-row flex-wrap">
+      <!-- Card de notificação 1 -->
+      <div class="card m-2" style="width: 18rem">
+        <div class="card-header">{{ Dates[0] }}</div>
+        <div class="card-body">
+          <p class="card-text">{{ Notifications[0] }}</p>
+          <a [routerLink]="['/dashboard/profile']" class="btn btn-danger"
+            >Atualizar agora</a
+          >
+        </div>
+      </div>
 
-        <!-- Mensagem de ajuda ou assistência, caso o usuário precise -->
-        <p class="mb-0">
+      <!-- Card de notificação 2 -->
+      <div class="card m-2" style="width: 18rem">
+        <div class="card-header">{{ Dates[1] }}</div>
+        <div class="card-body">
+          <p class="card-text">{{ Notifications[1] }}</p>
+          <a [routerLink]="['/dashboard/profile']" class="btn btn-danger"
+            >Atualizar agora</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de saudação -->
+  <div
+    class="modal fade"
+    id="welcomeModal"
+    tabindex="-1"
+    aria-labelledby="welcomeModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="welcomeModalLabel">
+            Bem-vindo(a) {{ User }}!
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
           Caso tenha qualquer dúvida ou precise de assistência, não hesite em
-          entrar em contato conosco. Estamos aqui para ajudar!
-        </p>
-      </div>
-
-      <!-- Alerta adicional com botão de fechar, visível com base na variável showNotificationAlert -->
-      <div
-        *ngIf="showNotificationAlert"
-        class="alert alert-success d-flex align-items-center justify-content-between"
-        role="alert"
-      >
-        <!-- Instrução para o usuário sobre como visualizar o histórico de notificações -->
-        Você pode visualizar todo o seu histórico de notificações clicando na
-        aba "Histórico de notificações" logo acima. ☝️
-        <!-- Botão para fechar o alerta, ao clicar executa a função closeButton() -->
-        <button
-          type="button"
-          class="btn-close"
-          aria-label="Close"
-          (click)="closeButton()"
-        ></button>
-      </div>
-
-      <!-- Título principal da seção de notificações -->
-      <h1 class="px-5"><strong>Notificações:</strong></h1>
-
-      <!-- Área contendo o formulário com as notificações -->
-      <div class="p-5">
-        <!-- Ajustamos aqui -->
-        <div class="d-flex flex-row flex-wrap">
-          <!-- Primeira notificação, estruturada dentro de um card -->
-          <div class="card m-2" style="width: 18rem">
-            <div class="card-header">Notificação 1</div>
-            <div class="card-body">
-              <!-- Exibe a primeira notificação da lista Notifications -->
-              <p class="card-text">
-                {{ Notifications[0] }}
-              </p>
-              <!-- Link para o perfil, sugerindo ao usuário que atualize as informações -->
-              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger">
-                Atualizar agora
-              </a>
-            </div>
-          </div>
-
-          <!-- Segunda notificação, estruturada de forma semelhante -->
-          <div class="card m-2" style="width: 18rem">
-            <div class="card-header">Notificação 2</div>
-            <div class="card-body">
-              <!-- Exibe a segunda notificação da lista Notifications -->
-              <p class="card-text">
-                {{ Notifications[1] }}
-              </p>
-              <!-- Link para o perfil, sugerindo ao usuário que atualize as informações -->
-              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger">
-                Atualizar agora
-              </a>
-            </div>
-          </div>
+          entrar em contato.
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Fechar
+          </button>
         </div>
       </div>
     </div>

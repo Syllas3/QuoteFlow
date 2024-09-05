@@ -1,49 +1,58 @@
 {
-  "hash": "631474fe",
-  "configHash": "77c9b1ab",
+  "hash": "ca4383af",
+  "configHash": "e8e7721b",
   "lockfileHash": "55e0c478",
-  "browserHash": "874d2afe",
+  "browserHash": "1b480757",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "cc0d87b1",
+      "fileHash": "49831daf",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "ac29dcdb",
+      "fileHash": "3e1215ff",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "5252f52f",
+      "fileHash": "91255ede",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "a3d8360a",
+      "fileHash": "d50d4588",
+      "needsInterop": false
+    },
+    "bootstrap": {
+      "src": "../../../../../node_modules/bootstrap/dist/js/bootstrap.esm.js",
+      "file": "bootstrap.js",
+      "fileHash": "254393b0",
       "needsInterop": false
     },
     "ngx-mask": {
       "src": "../../../../../node_modules/ngx-mask/fesm2022/ngx-mask.mjs",
       "file": "ngx-mask.js",
-      "fileHash": "74dae639",
+      "fileHash": "882d91f8",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-F7PFZGV4": {
-      "file": "chunk-F7PFZGV4.js"
+    "chunk-WIALBNO4": {
+      "file": "chunk-WIALBNO4.js"
     },
-    "chunk-SXM6IB3K": {
-      "file": "chunk-SXM6IB3K.js"
+    "chunk-MLFPJGJO": {
+      "file": "chunk-MLFPJGJO.js"
     },
-    "chunk-PBKKMZF6": {
-      "file": "chunk-PBKKMZF6.js"
+    "chunk-C7ZNULGT": {
+      "file": "chunk-C7ZNULGT.js"
+    },
+    "chunk-XWLXMCJQ": {
+      "file": "chunk-XWLXMCJQ.js"
     }
   }
 }

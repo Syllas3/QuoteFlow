@@ -7,15 +7,13 @@
             Notificações
           </li>
           <li class="breadcrumb-item">
-            <a [routerLink]="['/dashboard/notifications_historic']"
-              >Histórico de notificações</a
-            >
+            <a [routerLink]="['/dashboard/notifications_historic']">Histórico de notificações</a>
           </li>
         </ol>
       </nav>
 
       <div class="alert alert-success" role="alert">
-        <h4 class="alert-heading">Seja muito bem-vindo(a) {{Users}} !</h4>
+        <h4 class="alert-heading">Seja muito bem-vindo(a) {{ User }}!</h4> <!-- Corrigido aqui -->
         <p>
           Estamos felizes em tê-lo conosco! Se você está lendo esta mensagem,
           desejamos que aproveite ao máximo nosso sistema de cotação.
@@ -44,9 +42,7 @@
                 Para realizar cotações em nosso sistema, primeiro é necessário
                 cadastrar o seu CNPJ no seu perfil.
               </p>
-              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger"
-                >Atualizar agora</a
-              >
+              <a [routerLink]="['/dashboard/profile']" class="btn btn-danger">Atualizar agora</a>
             </div>
           </div>
         </form>

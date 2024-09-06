@@ -9,76 +9,117 @@
       </nav>
       <h1 class="px-5"><strong>Solicitar cotação:</strong></h1>
       <div class="p-5">
-        <div
-          class="p-4 rounded"
-          style="
-            background-color: #e8e8e8;
-            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-              rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-          "
-        >
-          <div class="d-flex align-items-center gap-5">
-            <div class="d-flex flex-column ml-3">
-              <label for="categoria" class="pb-2">Categoria</label>
-              <select name="categoria" id="categoria" class="form-select">
-                <option value="MADEIRA">MADEIRA</option>
-                <option value="ALIMENTOS">ALIMENTOS</option>
-                <option value="LIMPEZA">LIMPEZA</option>
-                <option value="OUTROS">OUTROS</option>
-                <option value="ELETRONICOS">ELETRÔNICOS</option>
-                <option value="ROUPAS">ROUPAS</option>
-                <option value="COSMETICOS">COSMÉTICOS</option>
-                <option value="UTENSILIOS">UTENSÍLIOS</option>
-                <option value="FERRAMENTAS">FERRAMENTAS</option>
-                <option value="MATERIAIS_CONSTRUCAO">
-                  MATERIAIS DE CONSTRUÇÃO
-                </option>
-                <!-- Opções adicionais -->
-              </select>
-            </div>
-
-            <div class="d-flex flex-column ml-3">
-              <label for="nome-produto" class="pb-2">Nome do produto</label>
-              <input
-                type="text"
-                id="nome-produto"
-                class="form-control"
-                placeholder="MDF"
-              />
-            </div>
-
-            <div class="d-flex flex-column ml-3">
-              <label for="quantidade" class="pb-2">Quantidade</label>
-              <input
-                type="number"
-                id="quantidade"
-                class="form-control"
-                placeholder="0"
-                mask="00000"
-                [validation]="true"
-              />
-            </div>
-          </div>
-
-          <!-- Mova o textarea para um novo div abaixo dos inputs -->
-          <div class="form-floating mt-4">
-            <textarea
-              class="form-control"
-              placeholder="Leave a comment here"
-              id="floatingTextarea2"
-              style="height: 100px"
-            ></textarea>
-            <label for="floatingTextarea2">Observação:</label>
-          </div>
-
-          <button
-            type="submit"
-            class="btn btn-success mt-5 d-flex align-items-center justify-content-center gap-2"
-            disabled
+        <form [formGroup]="quotationForm" (ngSubmit)="onSubmit()">
+          <div
+            class="p-4 rounded"
+            style="
+              background-color: #e8e8e8;
+              box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+                rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            "
           >
-            <i class="bi bi-send-plus-fill"></i>
-          </button>
-        </div>
+            <div class="d-flex align-items-center gap-5">
+              <div class="d-flex flex-column ml-3">
+                <label for="categoria" class="pb-2">Categoria:</label>
+                <select
+                  name="categoria"
+                  id="categoria"
+                  class="form-select"
+                  formControlName="categoria"
+                >
+                  <option value="">Selecione uma categoria</option>
+                  <option value="MADEIRA">MADEIRA</option>
+                  <option value="ALIMENTOS">ALIMENTOS</option>
+                  <option value="LIMPEZA">LIMPEZA</option>
+                  <option value="OUTROS">OUTROS</option>
+                  <option value="ELETRONICOS">ELETRÔNICOS</option>
+                  <option value="ROUPAS">ROUPAS</option>
+                  <option value="COSMETICOS">COSMÉTICOS</option>
+                  <option value="UTENSILIOS">UTENSÍLIOS</option>
+                  <option value="FERRAMENTAS">FERRAMENTAS</option>
+                  <option value="MATERIAIS_CONSTRUCAO">
+                    MATERIAIS DE CONSTRUÇÃO
+                  </option>
+                  <!-- Opções adicionais -->
+                </select>
+                <div
+                  *ngIf="
+                    quotationForm.get('categoria')?.touched &&
+                    quotationForm.get('categoria')?.invalid
+                  "
+                  class="text-danger"
+                >
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                  Categoria é <strong>obrigatória</strong>.
+                </div>
+              </div>
+
+              <div class="d-flex flex-column ml-3">
+                <label for="nome-produto" class="pb-2">Produto:</label>
+                <input
+                  type="text"
+                  id="nome-produto"
+                  class="form-control"
+                  formControlName="nomeProduto"
+                  placeholder="MDF"
+                />
+                <div
+                  *ngIf="
+                    quotationForm.get('nomeProduto')?.touched &&
+                    quotationForm.get('nomeProduto')?.invalid
+                  "
+                  class="text-danger"
+                >
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                  Nome do produto é <strong>obrigatório</strong>.
+                </div>
+              </div>
+
+              <div class="d-flex flex-column ml-3">
+                <label for="quantidade" class="pb-2">Quantidade:</label>
+                <input
+                  type="number"
+                  id="quantidade"
+                  class="form-control"
+                  formControlName="quantidade"
+                  placeholder="0"
+                />
+                <div
+                  *ngIf="
+                    quotationForm.get('quantidade')?.touched &&
+                    quotationForm.get('quantidade')?.invalid
+                  "
+                  class="text-danger"
+                >
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                  Quantidade deve ser maior que zero.
+                </div>
+              </div>
+            </div>
+
+            <!-- Observação -->
+            <div class="form-floating mt-4">
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="floatingTextarea2"
+                style="height: 100px"
+                formControlName="observacao"
+              ></textarea>
+              <label for="floatingTextarea2">Observação:</label>
+            </div>
+
+            <!-- Botão de submit -->
+            <button
+              type="submit"
+              class="btn btn-success mt-5 d-flex align-items-center justify-content-center gap-2"
+              [disabled]="quotationForm.invalid"
+            >
+              <i class="bi bi-send-plus-fill"></i>
+              Enviar
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

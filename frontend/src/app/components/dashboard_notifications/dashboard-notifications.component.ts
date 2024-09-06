@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { SidebarDashboardComponent } from "../sidebar_dashboard/sidebar-dashboard.component";
 import { NotificationsFormComponent } from "../notifications_form/notifications-form.component";
 
@@ -7,8 +7,15 @@ import { NotificationsFormComponent } from "../notifications_form/notifications-
   standalone: true,
   imports: [SidebarDashboardComponent, NotificationsFormComponent],
   templateUrl: './dashboard-notifications.component.html',
-  styleUrl: './dashboard-notifications.component.css'
+  styleUrls: ['./dashboard-notifications.component.css']
 })
-export class DashboardNotificationsComponent {
+export class DashboardNotificationsComponent implements OnInit {
 
+  constructor(private el: ElementRef) {}
+
+  ngOnInit(): void {
+    const modalElement = this.el.nativeElement.querySelector('#modalNotifications');
+    const modal = (window as any).bootstrap.Modal.getOrCreateInstance(modalElement);
+    modal.show();
+  }
 }

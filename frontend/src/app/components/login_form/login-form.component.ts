@@ -1,20 +1,23 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
 
 @Component({
   selector: 'app-login-form',
   standalone: true,
-  imports: [RouterModule, NgxMaskDirective, NgxMaskPipe],
+  imports: [RouterModule, NgxMaskDirective, NgxMaskPipe, ReactiveFormsModule],
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.css',
 })
 export class LoginFormComponent {
-  constructor(private router: Router) {}
+  loginForm: FormGroup; // Formulário gerenciado pelo FormGroup
 
-  // login() {
-  //   // Aqui você pode adicionar a lógica de autenticação real
-  //   // Redireciona para a página de dashboard após o login
-  //   this.router.navigate(['/dashboard']);
-  // }
+  constructor(private fb: FormBuilder) {
+    // Inicialização do formulário com campos e validações
+    this.loginForm = this.fb.group({
+      
+    })
+  }
+
 }

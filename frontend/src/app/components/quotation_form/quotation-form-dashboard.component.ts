@@ -20,10 +20,10 @@ export class FormDashboardComponent {
   constructor(private fb: FormBuilder) {
     // Inicialização do formulário com campos e validações
     this.quotationForm = this.fb.group({
-      categoria: ['', Validators.required], // Campo obrigatório
-      nomeProduto: ['', Validators.required], // Campo obrigatório
-      quantidade: [null, [Validators.required, Validators.min(1)]], // Campo obrigatório com valor mínimo de 1
-      observacao: [''], // Campo opcional
+      category: ['', Validators.required], // Campo obrigatório
+      productName: ['', Validators.required], // Campo obrigatório
+      quantity: [null, [Validators.required, Validators.min(1)]], // Campo obrigatório com valor mínimo de 1
+      observation: [''], // Campo opcional
     });
   }
 

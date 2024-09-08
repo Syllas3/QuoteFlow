@@ -1,35 +1,27 @@
 <div class="container-fluid main p-3">
-  <div>
-    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Library</li>
-      </ol>
-    </nav>
+  <div
+    class="alert alert-success d-flex align-items-center justify-content-between"
+    role="alert"
+  >
+    <!-- Instrução para o usuário sobre como visualizar o histórico de notificações -->
+    Você pode visualizar todo o seu histórico de notificações clicando na aba
+    "Histórico de notificações" logo acima. ☝️
+    <!-- Botão para fechar o alerta, ao clicar executa a função closeButton() -->
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
 
+  <h1 class="px-5"><strong>Seu perfil:</strong></h1>
+
+  <div class="p-5">
     <div
-      class="alert alert-success d-flex align-items-center justify-content-between"
-      role="alert"
+      class="p-4 rounded"
+      style="
+        background-color: #e8e8e8;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      "
     >
-      <!-- Instrução para o usuário sobre como visualizar o histórico de notificações -->
-      Você pode visualizar todo o seu histórico de notificações clicando na aba
-      "Histórico de notificações" logo acima. ☝️
-      <!-- Botão para fechar o alerta, ao clicar executa a função closeButton() -->
-      <button type="button" class="btn-close" aria-label="Close"></button>
-    </div>
-
-    <h1 class="px-5"><strong>Seu perfil:</strong></h1>
-
-    <div class="p-5">
-      <div
-        class="p-4 rounded"
-        style="
-          background-color: #e8e8e8;
-          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-        "
-      >
-        <!-- <div>
+      <!-- <div>
         <img
           style="height: 80px"
           src="https://th.bing.com/th/id/OIP.1asifY692Tb7m4S1HQgVkwHaHa?rs=1&pid=ImgDetMain"
@@ -37,103 +29,94 @@
           alt="..."
         />
       </div> -->
-        <form>
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">Nome:</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Lucas"
-                disabled
-              />
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">CNPJ:</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="00.000.000/0000-00"
-                mask="00.000.000/0000-00"
-                formControlName="cnpj"
-              />
-            </div>
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">Empresa:</label>
-              <input type="text" class="form-control" placeholder="QuoteFlow" />
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="row mb-3">
-            <div class="col-md-4">
-              <label class="form-label">CEP:</label>
-              <input type="text" class="form-control" placeholder="01001-000" />
-            </div>
-            <div class="col-md-8">
-              <label class="form-label">Logradouro:</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Praça da Sé"
-              />
-            </div>
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-md-4">
-              <label class="form-label">Bairro:</label>
-              <input type="text" class="form-control" placeholder="Sé" />
-            </div>
-            <div class="col-md-4">
-              <label class="form-label">Localidade:</label>
-              <input type="text" class="form-control" placeholder="São Paulo" />
-            </div>
-            <div class="col-md-4">
-              <label class="form-label">UF:</label>
-              <input type="text" class="form-control" placeholder="SP" />
-            </div>
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">Estado:</label>
-              <input type="text" class="form-control" placeholder="São Paulo" />
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">Telefone:</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="+00 (00) 00000000"
-                mask="(00) 00000000||+00 (00) 00000000"
-              />
-            </div>
-          </div>
-
-          <div class="form-check mb-3">
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Nome:</label>
             <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
+              type="text"
+              class="form-control"
+              placeholder="Lucas"
+              disabled
             />
-            <label class="form-check-label" for="exampleCheck1"
-              >Concordo com os termos e condições.</label
-            >
           </div>
+          <div class="col-md-6">
+            <label class="form-label">CNPJ:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="00.000.000/0000-00"
+              mask="00.000.000/0000-00"
+              formControlName="cnpj"
+            />
+          </div>
+        </div>
 
-          <button class="btn btn-primary">Submeter</button>
-        </form>
-      </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Empresa:</label>
+            <input type="text" class="form-control" placeholder="QuoteFlow" />
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label class="form-label">CEP:</label>
+            <input type="text" class="form-control" placeholder="01001-000" />
+          </div>
+          <div class="col-md-8">
+            <label class="form-label">Logradouro:</label>
+            <input type="text" class="form-control" placeholder="Praça da Sé" />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label class="form-label">Bairro:</label>
+            <input type="text" class="form-control" placeholder="Sé" />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Localidade:</label>
+            <input type="text" class="form-control" placeholder="São Paulo" />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">UF:</label>
+            <input type="text" class="form-control" placeholder="SP" />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Estado:</label>
+            <input type="text" class="form-control" placeholder="São Paulo" />
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Telefone:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="+00 (00) 00000000"
+              mask="(00) 00000000||+00 (00) 00000000"
+            />
+          </div>
+        </div>
+
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Concordo com os termos e condições.</label
+          >
+        </div>
+
+        <button class="btn btn-primary">Submeter</button>
+      </form>
     </div>
   </div>
 </div>

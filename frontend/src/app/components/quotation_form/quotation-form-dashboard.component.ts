@@ -48,6 +48,6 @@ export class FormDashboardComponent {
   // Função de fechar o alerta
   closeButton() {
     this.showNotificationAlert = false;
-    localStorage.setItem('notificationQuotationPage', 'true');
+    localStorage.setItem('notificationQuotationPage', String(true));
   }
 }

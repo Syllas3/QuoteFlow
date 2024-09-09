@@ -31,6 +31,6 @@ export class NotificationsFormComponent {
   // Função de fechar o alerta
   closeButton() {
     this.showNotificationAlert = false;
-    localStorage.setItem('notificationNotificationsPage', 'true');
+    localStorage.setItem('notificationNotificationsPage', String(true));
   }
 }

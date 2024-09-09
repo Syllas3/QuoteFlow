@@ -22,6 +22,6 @@ export class ProfileFormComponent {
   // Função de fechar o alerta
   closeButton() {
     this.showNotificationAlert = false;
-    localStorage.setItem('notificationProfilePage', 'true');
+    localStorage.setItem('notificationProfilePage', String(true));
   }
 }

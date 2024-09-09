@@ -11,9 +11,8 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class NotificationsFormComponent {
   showNotificationAlert: boolean;
-  User: string = 'Lucas'; // Nome do usuário
+  User: string = 'Lucas';
 
-  // Definir as datas e as notificações
   Dates: Array<string> = ['05/09/2024', '06/09/2024', '00/00/0000'];
 
   Notifications: Array<string> = [
@@ -23,13 +22,15 @@ export class NotificationsFormComponent {
   ];
 
   constructor() {
-    const notificationClosed = localStorage.getItem('notificationClosed');
-    this.showNotificationAlert = !notificationClosed;
+    const notificationNotificationsPage = localStorage.getItem(
+      'notificationNotificationsPage'
+    );
+    this.showNotificationAlert = !notificationNotificationsPage;
   }
 
   // Função de fechar o alerta
   closeButton() {
     this.showNotificationAlert = false;
-    localStorage.setItem('notificationClosed', 'true');
+    localStorage.setItem('notificationNotificationsPage', 'true');
   }
 }

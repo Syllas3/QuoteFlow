@@ -15,6 +15,7 @@ import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
   templateUrl: './quotation-form-dashboard.component.html',
 })
 export class FormDashboardComponent {
+
   quotationForm: FormGroup; // Formulário gerenciado pelo FormGroup
 
   constructor(private fb: FormBuilder) {
@@ -35,4 +36,6 @@ export class FormDashboardComponent {
       console.log(this.quotationForm.value!);
     }
   }
+
+ 
 }

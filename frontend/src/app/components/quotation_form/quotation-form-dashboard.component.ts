@@ -42,10 +42,14 @@ export class FormDashboardComponent {
   onSubmit() {
     // Verifica se o formulário não é nulo e é válido
     if (this.quotationForm && this.quotationForm.valid) {
-      // Dispara o toast
+      // Dispara o toast com uma barra de progresso
       this.toastr.info('Enviada com sucesso!', 'Sucesso!', {
         positionClass: 'toast-top-right', // Ajuste a posição conforme necessário
+        progressBar: true, // Exibe a barra de progresso
+        progressAnimation: 'increasing', // Ou 'decreasing', depende do estilo desejado
+        timeOut: 5000, // Define a duração da exibição do toast em milissegundos (5 segundos aqui)
       });
+
       // Acessa os valores do formulário com non-null assertion (!)
       console.log(this.quotationForm.value!);
     }

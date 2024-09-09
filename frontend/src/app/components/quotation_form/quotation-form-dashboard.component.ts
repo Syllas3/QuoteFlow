@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-quotation-form-dashboard',
@@ -18,7 +19,8 @@ export class FormDashboardComponent {
   quotationForm: FormGroup; // Formulário gerenciado pelo FormGroup
   showNotificationAlert: boolean = false; // Inicializa a variável
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private toastr: ToastrService) {
+    // Add 'toastr' as a dependency
     // Combina a lógica dos dois construtores aqui
 
     // Inicialização do formulário com campos e validações
@@ -40,6 +42,10 @@ export class FormDashboardComponent {
   onSubmit() {
     // Verifica se o formulário não é nulo e é válido
     if (this.quotationForm && this.quotationForm.valid) {
+      // Dispara o toast
+      this.toastr.info('Enviada com sucesso!', 'Sucesso!', {
+        positionClass: 'toast-top-right', // Ajuste a posição conforme necessário
+      });
       // Acessa os valores do formulário com non-null assertion (!)
       console.log(this.quotationForm.value!);
     }

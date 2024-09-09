@@ -1,3 +1,4 @@
+import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   Animation,
   AnimationDriver,
@@ -20,10 +21,11 @@ import {
   normalizeKeyframes,
   validateStyleProperty,
   validateWebAnimatableStyleProperty
-} from "./chunk-IROURRTI.js";
-import "./chunk-RGAMP2WP.js";
-import "./chunk-JY7SEEEK.js";
-import "./chunk-AECI6WNA.js";
+} from "./chunk-YR56RWSN.js";
+import "./chunk-JYRKH5NQ.js";
+import "./chunk-HCFBPZ3H.js";
+import "./chunk-VAMGWXBZ.js";
+import "./chunk-NQ4HTGF6.js";
 export {
   AnimationDriver,
   NoopAnimationDriver,
@@ -47,4 +49,4 @@ export {
   validateStyleProperty as ɵvalidateStyleProperty,
   validateWebAnimatableStyleProperty as ɵvalidateWebAnimatableStyleProperty
 };
-//# sourceMappingURL=browser-MUEHUBGK.js.map
+//# sourceMappingURL=browser-GKC4HKH3.js.map

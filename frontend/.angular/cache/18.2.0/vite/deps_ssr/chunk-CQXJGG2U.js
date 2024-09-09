@@ -1,3 +1,4 @@
+import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   AnimationDriver,
   AnimationEngine,
@@ -6,15 +7,14 @@ import {
   NoopAnimationDriver,
   WebAnimationsDriver,
   WebAnimationsStyleNormalizer
-} from "./chunk-IROURRTI.js";
-import "./chunk-RGAMP2WP.js";
+} from "./chunk-NDEXJXL4.js";
 import {
   BrowserModule,
   DomRendererFactory2
-} from "./chunk-ZJJM27NY.js";
+} from "./chunk-F2U5FTJQ.js";
 import {
   DOCUMENT
-} from "./chunk-JY7SEEEK.js";
+} from "./chunk-HCFBPZ3H.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -28,7 +28,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-AECI6WNA.js";
+} from "./chunk-VAMGWXBZ.js";
 
 // node_modules/@angular/platform-browser/fesm2022/animations.mjs
 var _InjectableAnimationEngine = class _InjectableAnimationEngine extends AnimationEngine {
@@ -171,13 +171,13 @@ var NoopAnimationsModule = _NoopAnimationsModule;
 function provideNoopAnimations() {
   return [...BROWSER_NOOP_ANIMATIONS_PROVIDERS];
 }
+
 export {
-  ANIMATION_MODULE_TYPE,
+  InjectableAnimationEngine,
   BrowserAnimationsModule,
-  NoopAnimationsModule,
   provideAnimations,
-  provideNoopAnimations,
-  InjectableAnimationEngine as ɵInjectableAnimationEngine
+  NoopAnimationsModule,
+  provideNoopAnimations
 };
 /*! Bundled license information:
 
@@ -188,4 +188,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=@angular_platform-browser_animations.js.map
+//# sourceMappingURL=chunk-CQXJGG2U.js.map

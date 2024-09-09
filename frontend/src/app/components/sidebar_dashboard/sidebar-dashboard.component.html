@@ -10,23 +10,22 @@
   <ul class="sidebar-nav">
     <li class="sidebar-item">
       <a
+        [routerLink]="['/dashboard/notifications']"
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
+        <i class="bi bi-bell-fill"></i>
+        <span class="fs-5 text">Notificações</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a
         [routerLink]="['/dashboard/panel']"
         routerLinkActive="active"
         class="sidebar-link"
       >
         <i class="bi bi-reception-4"></i>
         <span class="fs-5 text">Painel</span>
-      </a>
-    </li>
-
-    <li class="sidebar-item">
-      <a
-        [routerLink]="['/dashboard/notifications']"
-        routerLinkActive="active"
-        class="sidebar-link"
-      >
-        <i class="bi bi-bell"></i>
-        <span class="fs-5 text">Notificações</span>
       </a>
     </li>
     <li class="sidebar-item">

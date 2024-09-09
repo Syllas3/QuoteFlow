@@ -7,6 +7,7 @@ import { DashboardNotificationsComponent } from './components/dashboard_notifica
 import { DashboardProfileComponent } from './components/dashboard_profile/dashboard-profile.component';
 import { NotificationsHistoricComponent } from './components/notifications_historic/notifications-historic.component';
 import { DashboardConfigurationsComponent } from './components/dashboard_configurations/dashboard-configurations.component';
+import { ToastalertComponent } from './components/toastalert/toastalert.component';
 
 export const routes: Routes = [
   { path: '', component: LoginPageComponent }, // Home
@@ -18,6 +19,9 @@ export const routes: Routes = [
   { path: 'dashboard/notifications_historic', component: NotificationsHistoricComponent }, // Página de histórico de notificações
   { path: 'dashboard/profile', component: DashboardProfileComponent }, // Página de perfil
   { path: 'dashboard/configurations', component: DashboardConfigurationsComponent }, // Página de configurações
+
+  // Em teste
+  { path: 'toast', component: ToastalertComponent }
 
   // Outras rotas
 ];

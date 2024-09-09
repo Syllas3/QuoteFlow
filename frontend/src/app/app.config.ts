@@ -13,6 +13,7 @@ import { provideEnvironmentNgxMask } from 'ngx-mask';
 import { provideAnimations } from '@angular/platform-browser/animations';
 // Importa a função que fornece o serviço de Toastr, utilizado para exibir notificações/toasts na aplicação
 import { provideToastr } from 'ngx-toastr';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 // Define a configuração da aplicação como um objeto do tipo ApplicationConfig
 export const appConfig: ApplicationConfig = {
@@ -29,6 +30,6 @@ export const appConfig: ApplicationConfig = {
     // Fornece suporte a animações, necessário para utilizar animações no Angular (como Material Design, por exemplo)
     provideAnimations(),
     // Fornece o serviço Toastr, que permite exibir notificações na tela
-    provideToastr(),
+    provideToastr(), provideAnimationsAsync(),
   ],
 };

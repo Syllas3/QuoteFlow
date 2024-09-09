@@ -13,15 +13,15 @@ export class ProfileFormComponent {
   showNotificationAlert: boolean;
 
   constructor() {
-    const notificationsProfilePage = localStorage.getItem(
-      'notificationsProfilePage'
+    const notificationProfilePage = localStorage.getItem(
+      'notificationProfilePage'
     );
-    this.showNotificationAlert = !notificationsProfilePage;
+    this.showNotificationAlert = !notificationProfilePage;
   }
 
   // Função de fechar o alerta
   closeButton() {
     this.showNotificationAlert = false;
-    localStorage.setItem('notificationsProfilePage', 'true');
+    localStorage.setItem('notificationProfilePage', 'true');
   }
 }

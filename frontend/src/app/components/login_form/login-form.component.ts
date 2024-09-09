@@ -24,24 +24,28 @@ import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
 })
 export class LoginFormComponent {
   loginForm: FormGroup;
+  isLoading = false; // Controle do estado de carregamento
 
   constructor(private fb: FormBuilder, private router: Router) {
-    // Inicialização do formulário com validações
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]], // Campo obrigatório com validação de email
-      password: ['', [Validators.required, Validators.minLength(6)]], // Campo obrigatório com mínimo de 6 caracteres
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
-  // Método chamado no envio do formulário
-  onSubmit() {
+  // Método de login
+  login() {
     if (this.loginForm.valid) {
-      // Formulário válido, prossiga com o login
+      this.isLoading = true; // Ativa o loader
       console.log('Formulário válido:', this.loginForm.value);
-      this.router.navigate(['/dashboard/notifications']); // Redireciona ao dashboard
+
+      // Simula um tempo de login e redireciona
+      setTimeout(() => {
+        this.isLoading = false; // Desativa o loader ao finalizar
+        this.router.navigate(['/dashboard/notifications']); // Redireciona ao dashboard
+      }, 2000); // Simula 2 segundos de carregamento
     } else {
-      // Exiba mensagens de erro
-      this.loginForm.markAllAsTouched(); // Marca todos os campos para mostrar erros se houver
+      this.loginForm.markAllAsTouched();
     }
   }
 }

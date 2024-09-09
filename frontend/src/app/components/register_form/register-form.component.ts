@@ -24,25 +24,27 @@ import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
 })
 export class RegisterFormComponent {
   registerForm: FormGroup;
+  isLoading = false; // Adicionada a variável de controle de carregamento
 
   constructor(private fb: FormBuilder, private router: Router) {
-    // Inicialização do formulário com validações
     this.registerForm = this.fb.group({
-      name: ['', [Validators.required]], // Campo obrigatório
-      email: ['', [Validators.required, Validators.email]], // Campo obrigatório com validação de email
-      password: ['', [Validators.required, Validators.minLength(6)]], // Campo obrigatório com mínimo de 6 caracteres
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
-  // Método chamado no envio do formulário
-  onSubmit() {
+  register() {
     if (this.registerForm.valid) {
-      // Formulário válido, prossiga com o registro
+      this.isLoading = true; // Ativa o loader
       console.log('Formulário válido:', this.registerForm.value);
-      this.router.navigate(['/dashboard']); // Redireciona para o dashboard
+
+      setTimeout(() => {
+        this.isLoading = false; // Desativa o loader após a operação
+        this.router.navigate(['/dashboard']); // Redireciona após o registro
+      }, 2000); // Simulação de um tempo de processamento de 2 segundos
     } else {
-      // Exiba mensagens de erro
-      this.registerForm.markAllAsTouched(); // Marca todos os campos para mostrar erros se houver
+      this.registerForm.markAllAsTouched(); // Exibe os erros
     }
   }
 }

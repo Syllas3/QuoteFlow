@@ -13,7 +13,7 @@
     [formGroup]="registerForm"
     class="p-4 bg-white rounded"
     style="width: 100%; max-width: 350px; border: 1px solid #dee2e6"
-    (ngSubmit)="onSubmit()"
+    (ngSubmit)="register()"
   >
     <div class="mb-3">
       <label class="form-label text-dark">Nome:</label>
@@ -87,18 +87,34 @@
 
     <div class="d-flex flex-row gap-2">
       <button
+        [disabled]="isLoading"
         class="btn w-50"
         type="submit"
         style="background-color: #0b5389; color: #fff"
       >
-        <i class="bi bi-envelope-fill"></i>
+        <i *ngIf="!isLoading" class="bi bi-envelope-fill"></i>
+        <div
+          *ngIf="isLoading"
+          class="spinner-border spinner-border-sm"
+          role="status"
+        >
+          <span class="visually-hidden">Carregando...</span>
+        </div>
       </button>
       <button
+        [disabled]="isLoading"
         class="btn w-50"
-        type="submit"
+        type="button"
         style="background-color: #0b5389; color: #fff"
       >
-        <i class="bi bi-google"></i>
+        <i *ngIf="!isLoading" class="bi bi-google"></i>
+        <div
+          *ngIf="isLoading"
+          class="spinner-border spinner-border-sm"
+          role="status"
+        >
+          <span class="visually-hidden">Carregando...</span>
+        </div>
       </button>
     </div>
   </form>

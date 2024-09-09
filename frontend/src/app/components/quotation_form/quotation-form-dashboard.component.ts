@@ -15,10 +15,12 @@ import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
   templateUrl: './quotation-form-dashboard.component.html',
 })
 export class FormDashboardComponent {
-
   quotationForm: FormGroup; // Formulário gerenciado pelo FormGroup
+  showNotificationAlert: boolean = false; // Inicializa a variável
 
   constructor(private fb: FormBuilder) {
+    // Combina a lógica dos dois construtores aqui
+
     // Inicialização do formulário com campos e validações
     this.quotationForm = this.fb.group({
       category: ['', Validators.required], // Campo obrigatório
@@ -26,6 +28,12 @@ export class FormDashboardComponent {
       quantity: [null, [Validators.required, Validators.min(1)]], // Campo obrigatório com valor mínimo de 1
       observation: [''], // Campo opcional
     });
+
+    // Lógica de notificação
+    const notificationQuotationPage = localStorage.getItem(
+      'notificationQuotationPage'
+    );
+    this.showNotificationAlert = !notificationQuotationPage;
   }
 
   // Método chamado no envio do formulário
@@ -37,5 +45,9 @@ export class FormDashboardComponent {
     }
   }
 
- 
+  // Função de fechar o alerta
+  closeButton() {
+    this.showNotificationAlert = false;
+    localStorage.setItem('notificationQuotationPage', 'true');
+  }
 }
